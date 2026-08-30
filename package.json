@@ -1,0 +1,72 @@
+{
+  "name": "vue-kanban-board-kit",
+  "version": "1.0.1",
+  "description": "Vue 3 Enterprise Kanban Board Kit: ATS candidate pipelines, succession planning 9-box grids, VIP referral workflows, and agile task management with smooth drag-and-drop.",
+  "type": "module",
+  "main": "./dist/vue-kanban-board-kit.cjs",
+  "module": "./dist/vue-kanban-board-kit.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/vue-kanban-board-kit.js",
+      "require": "./dist/vue-kanban-board-kit.cjs"
+    },
+    "./style.css": "./dist/vue-kanban-board-kit.css"
+  },
+  "files": [
+    "dist",
+    "assets",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "dev": "vite --config playground/vite.config.ts",
+    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly --outDir dist",
+    "test": "vitest run",
+    "typecheck": "vue-tsc --noEmit",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "~5.6.3",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.8",
+    "vue": "^3.5.13",
+    "vue-tsc": "^2.1.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mferasatali/vue-kanban-board-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mferasatali/vue-kanban-board-kit/issues"
+  },
+  "homepage": "https://github.com/mferasatali/vue-kanban-board-kit#readme",
+  "keywords": [
+    "vue",
+    "vue3",
+    "kanban",
+    "board",
+    "ats",
+    "pipeline",
+    "candidate-pipeline",
+    "succession-planning",
+    "vip-referral",
+    "task-management",
+    "drag-and-drop",
+    "agile"
+  ],
+  "author": "Muhammad Ferasat Ali",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
